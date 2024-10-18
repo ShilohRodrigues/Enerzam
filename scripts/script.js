@@ -117,6 +117,17 @@ let openCardIndex = null;
 for (let i = 0; i < teamCards.length; i++) {
   teamCards[i].addEventListener('click', (e) => {
     e.stopPropagation(); // Prevent click from propagating to window click event
+    
+    // Close the currently open modal if a different card is clicked
+    if (cardOpen && openCardIndex !== i) {
+      const currentOpen = teamCards[openCardIndex].getElementsByClassName('info-card')[0];
+      currentOpen.classList.remove('show');
+      currentOpen.classList.add('hidden');
+      cardOpen = false;
+      openCardIndex = null;
+    }
+
+    // Toggle the clicked card's modal
     if (!cardOpen) {
       const current = teamCards[i].getElementsByClassName('info-card')[0];
       current.classList.add('show');
