@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const userLang = navigator.language || navigator.userLanguage;
+      
+      // Redirect based on user's language preference
+      if (userLang.startsWith('fr')) {
+        window.location.href = '/fr/index.html';
+      } else {
+        window.location.href = '/en/index.html';
+      }
+    });
+  </script>
+</head>
+<body>
+  <p>Redirecting to your preferred language...</p>
+</body>
+</html>
