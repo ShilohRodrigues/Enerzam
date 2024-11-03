@@ -5,12 +5,18 @@ const openMenu = document.getElementById("hamburgerMenu");
 const closeMenu = document.getElementById("closeMenu");
 
 const setWhiteHeader = () => {
-  headerLogo.setAttribute('data', '/assets/images/logos/enerzam-hz-white_en.svg')
+  if (window.location.href.indexOf("/en/") != -1) 
+    headerLogo.setAttribute('data', '/assets/images/logos/enerzam-hz-white_en.svg')
+  else 
+    headerLogo.setAttribute('data', '/assets/images/logos/enerzam-hz-white_fr.svg')
   openMenu.style.background = 'url(/assets/images/icons/hamburger.svg) no-repeat center'
 }
 const setColorHeader = () => {
   if (mainHeader.classList.contains('white-logo')) return
-  headerLogo.setAttribute('data', '/assets/images/logos/enerzam-hz-color_en.svg')
+  if (window.location.href.indexOf("/en/") != -1) 
+    headerLogo.setAttribute('data', '/assets/images/logos/enerzam-hz-color_en.svg')
+  else
+    headerLogo.setAttribute('data', '/assets/images/logos/enerzam-hz-color_fr.svg')
 }
 const setBlackHB = () => {
   openMenu.style.background = 'url(/assets/images/icons/hamburger_black.svg) no-repeat center'

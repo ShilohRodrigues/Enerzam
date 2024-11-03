@@ -1,3 +1,21 @@
+/**
+ * Language Logic
+ */ 
+// Find language set in the browser
+document.addEventListener('DOMContentLoaded', function () {
+  const userLang = navigator.language || navigator.userLanguage;
+  const currentPath = window.location.pathname;
+
+  // Check if the user is on the root or a non-language-specific page
+  if (currentPath === '/' || currentPath === '/index.html') {
+    if (userLang.startsWith('fr')) {
+      window.location.href = '/fr/index.html';
+    } else {
+      window.location.href = '/en/index.html';
+    }
+  }
+});
+
 
 /** Animations
  *  
