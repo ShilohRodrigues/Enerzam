@@ -103,6 +103,9 @@ p.largest {
   font-size: 1.25rem;
   line-height: 1.8rem;
 }
+p.no-margin {
+  margin: 0 !important;
+}
 img {
   height: auto;
   width: 100%;
