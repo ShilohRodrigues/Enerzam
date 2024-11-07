@@ -85,8 +85,8 @@ h2.large {
     font-size: 1.8rem;
   }
   h2.shrink {
-    font-size: 1.6rem;
-    line-height: 2.3rem;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
   }
   p {
     font-size: 0.85rem !important;
@@ -95,6 +95,7 @@ h2.large {
 p {
   margin-bottom: 1rem;
   font-size: 0.95rem;
+  line-height: 1.3rem;
 }
 p.large {
   font-size: 1.05rem;
@@ -187,6 +188,9 @@ section {
 }
 .small-section {
   padding: 0.5rem 0;
+}
+.large-section {
+  padding: 6rem 0;
 }
 .med-section {
   padding: 4rem 0;
@@ -550,6 +554,11 @@ p.tagline:after {
   background-color: var(--bg);
   z-index: 2;
 }
+@media screen and (min-width: 768px) {
+  .main-banner.smaller-banner {
+    min-height: 700px;
+  }
+}
 .main-banner > div:not(.banner-content) {
   margin-top: 0rem;
 }
@@ -558,7 +567,7 @@ p.tagline:after {
   position: relative;
 }
 .banner-text {
-  max-width: min(700px, 90%);
+  max-width: min(850px, 90%);
   background-color: rgba(0, 0, 0, 0.65);
   padding: 2rem;
 }
@@ -911,9 +920,14 @@ main {
   width: 100px !important;
 }
 .border {
-  height: 100px;
   width: 2px;
   background-color: var(--primary-blue);
+}
+@media screen and (max-width: 900px) {
+  .iso {
+    height: 75px !important;
+    width: 75px !important;
+  }
 }
 
 /** Utility Grid **/

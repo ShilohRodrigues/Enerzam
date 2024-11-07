@@ -1,6 +1,8 @@
 /* Footer Styles */
 #footer-container {
-  padding: 5rem 0 2rem 0 !important
+  padding: 5rem 0 2rem 0 !important;
+  z-index: 3;
+  position: relative;
 }
 footer {
   grid-template-columns: auto auto auto auto;
@@ -63,6 +65,7 @@ footer .footer-block p {
 }
 .big-logo {
   height: 150px !important;
+  margin-bottom: 1rem;
 }
 .small-logo {
   height: 70px !important;
@@ -77,6 +80,7 @@ footer .footer-block p {
 .uclogo {
   height: 100px !important;
   width: auto;
+  margin-top: 0.5rem;
 }
 .copyright p {
   font-size: 0.7rem;
