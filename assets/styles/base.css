@@ -47,6 +47,7 @@ h1 {
   font-size: 2.9rem;
   font-weight: 800;
   letter-spacing: 1.5px;
+  line-height: 3.5rem;
   margin-bottom: 0.8rem;
 }
 h2 {
@@ -84,6 +85,10 @@ h2.large {
   h1.shrink {
     font-size: 1.8rem;
   }
+  h1.shrink-slightly {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
   h2.shrink {
     font-size: 1.5rem;
     line-height: 1.8rem;
@@ -99,6 +104,7 @@ p {
 }
 p.large {
   font-size: 1.05rem;
+  line-height: 1.5rem;
 }
 p.largest {
   font-size: 1.25rem;
@@ -184,7 +190,7 @@ section {
   padding: 8rem 0;
 }
 .big-section {
-  padding: 12rem 0;
+  padding: 10rem 0;
 }
 .small-section {
   padding: 0.5rem 0;
@@ -194,6 +200,11 @@ section {
 }
 .med-section {
   padding: 4rem 0;
+}
+@media screen and (max-width: 500px) {
+  .sml-section-mobile {
+    padding: 1rem 0;
+  }
 }
 .padding-only-top {
   padding: 4rem 0 0 0;
@@ -222,7 +233,7 @@ section {
   padding: 0 var(--left-right-padding);
 }
 @media screen and (max-width: 900px) {
-  .sml-section-mobile {
+  .sml-section-tablet {
     padding: 1rem 0;
   }
   .side-by-side-sections {
@@ -400,28 +411,19 @@ section {
 .color-blue {
   color: var(--primary-blue);
 }
-.tagline {
-  max-width: fit-content;
-  margin-bottom: 3rem;
+.heading-container {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  border-bottom: 3px solid;
+  border-color: var(--primary-green);
 }
-.accordion.tagline {
-  margin-bottom: 0;
+.heading-container > h1 {
+  margin-bottom: 0.1rem;
 }
-p.tagline:after {
-  margin: 1rem 0;
-}
-.tagline:after {
-  content: '';
-  display: block;
-  background-color: var(--primary-green);
-  height: 0.2rem;
-  width: 100%;
-}
-.tagline-blue:after {
-  background-color: var(--primary-blue);
-}
-.tagline-white:after {
-  background-color: #fff;
+@media screen and (max-width: 500px) {
+  .heading-container {
+    width: min-content;
+  }
 }
 .underline {
   width: fit-content;
@@ -429,6 +431,9 @@ p.tagline:after {
 }
 .blue-underline {
   border-color: var(--primary-blue);
+}
+.green-underline {
+  border-color: var(--primary-green);
 }
 .blue:before {
   background-color: var(--primary-blue) !important;
@@ -461,18 +466,17 @@ p.tagline:after {
 }
 .fancy-div {
   border: solid 4px #40569e;
-  padding: 3rem 2rem;
-  margin: 0 1rem;
+  padding: 3rem 1.9rem;
   position: relative;
 }
 .fancy-div h2 {
-  line-height: 1.6rem;
+  line-height: 1.9rem;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  max-width: 500px;
+  max-width: 600px;
   padding: 0 1rem;
   margin: 0;
   background: linear-gradient(to right, #e7e7e7 0%, #ededed 100%);
@@ -480,11 +484,16 @@ p.tagline:after {
 .fancy-div legend {
   font-size: 1.3rem;
   font-weight: 900;
-  padding: 0 4rem;
+  padding: 0 4rem 0.2rem 4rem;
 }
 @media screen and (max-width: 900px) {
   .fancy-div legend {
     padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .fancy-div h2  {
+    font-size: 1.4rem;
   }
 }
 .fancy-div > div {
@@ -498,7 +507,7 @@ p.tagline:after {
   position: relative;
 }
 .emphasis-box > div {
-  max-width: 600px;
+  max-width: 750px;
 }
 .bullet {
   position: relative;
@@ -554,14 +563,20 @@ p.tagline:after {
   background-color: var(--bg);
   z-index: 2;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 900px) {
+  .main-banner.larger-banner {
+    min-height: 1200px;
+  }
+}
+@media screen and (min-width: 900px) {
   .main-banner.smaller-banner {
     min-height: 700px;
   }
+  .main-banner > div:not(.banner-content) {
+    margin-top: 5rem;
+  }
 }
-.main-banner > div:not(.banner-content) {
-  margin-top: 0rem;
-}
+
 .banner-content {
   height: 100%;
   position: relative;
@@ -746,6 +761,11 @@ main {
 .img-w-txt .bigger-img {
   max-width: 600px;
   width: 100%;
+}
+.max-img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: unset !important;
 }
 .rounded-corner {
   border-radius: 20px;
@@ -940,7 +960,7 @@ main {
   position: relative;
   width: 30%;
   min-width: 250px;
-  height: 150px;
+  height: 200px;
 }
 .utility > div {
   display: flex;
@@ -962,6 +982,7 @@ main {
   bottom: 0;
   height: 100%;
   font-size: 0.8rem;
+  line-height: 1.1rem;
   opacity: 0;
   visibility: hidden;
   transition: 0.5s ease-in-out;
@@ -974,6 +995,7 @@ main {
 @media screen and (max-width: 900px) {
   .utility-grid .description {
     font-size: 0.7rem !important;
+    line-height: 1.1rem;
   }
 }
 
@@ -1030,7 +1052,14 @@ main {
 }
 @media screen and (max-width: 485px) {
   #marketCategories > a {
-    width: 100%;
+    width: 40%;
+  }
+  #marketCategories > a > object {
+    width: 60px;
+    height: 60px;
+  }
+  #marketCategories > a > h4 {
+    font-size: 0.9rem;
   }
 }
 .markets-contact {
@@ -1048,6 +1077,11 @@ main {
 .markets-contact .btn {
   padding: 0.7rem 3rem 0.7rem 1rem;
 }
+@media screen and (max-width: 950px) {
+  .markets-contact {
+    justify-content: flex-start;
+  }
+}
 
 /* Building Engineering Section */
 .building-eng-offers {
@@ -1064,9 +1098,9 @@ main {
   top: 20%;
   font-size: 0.8rem;
   padding: 1rem;
-  -webkit-box-shadow: 0px 0px 15px 2px rgba(13,227,255,0.42);
-  -moz-box-shadow: 0px 0px 15px 2px rgba(13,227,255,0.42);
-  box-shadow: 0px 0px 15px 2px rgba(13,227,255,0.42);
+  -webkit-box-shadow: 4px 4px 8px 3px rgba(14, 139, 181, 0.2);
+  -moz-box-shadow: 4px 4px 8px 3px rgba(14, 139, 181, 0.2);
+  box-shadow: 4px 4px 8px 3px rgba(14, 139, 181, 0.2);
 }
 .building-eng-offers object:not(:first-of-type) {
   margin-top: 3rem;
@@ -1076,7 +1110,8 @@ main {
   min-width: 600px;
 }
 .building-eng-offers aside a {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
 }
 .building-eng-offers aside a:hover {
   color: var(--primary-blue);
@@ -1138,17 +1173,18 @@ main {
 }
 
 /* accordion section styles */
-.accordion-cont {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
 .accordion {
-  padding: 1rem 0;
+  padding: 1.5rem 0 0.5rem 0;
   cursor: pointer;
+  width: fit-content;
+  border-bottom: 3px solid;
+  border-color: var(--primary-green);
 }
 .accordion-header {
   position: relative;
+}
+.accordion-header > p {
+  max-width: 80%;
 }
 .accordion-header:after {
   content: url(/assets/images/icons/arrow_black.svg);

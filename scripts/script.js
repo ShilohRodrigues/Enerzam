@@ -17,6 +17,16 @@ document.addEventListener('DOMContentLoaded', function () {
  
 });
 
+function changeLanguage() {
+  const currentPath = window.location.pathname;
+  if (currentPath.includes('en/')) {
+    window.location.href = currentPath.replace('en/', 'fr/')
+  }
+  else {
+    window.location.href = currentPath.replace('fr/', 'en/')
+  }
+}
+
 /** Animations
  *  
  *  Animates sections to slide in or fade in

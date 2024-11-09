@@ -82,6 +82,9 @@ header .logo {
   padding-bottom: 0.9rem;
   transition: .2s ease;
 }
+.header-nav > p {
+  cursor: pointer;
+}
 .header-nav .active-header:after {
   content: '';
   display: block;
