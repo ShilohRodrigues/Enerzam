@@ -556,25 +556,13 @@ section {
 }
 .main-banner {
   position: relative;
-  min-height: 1000px;
+  min-height: 700px;
+  padding: 250px 0 150px 0;
   border-bottom-left-radius: 55px;
   border-bottom-right-radius: 55px;
   box-shadow: 0px 5px 10px 4px rgba(54, 54, 54, 0.5);
   background-color: var(--bg);
   z-index: 2;
-}
-@media screen and (max-width: 900px) {
-  .main-banner.larger-banner {
-    min-height: 1200px;
-  }
-}
-@media screen and (min-width: 900px) {
-  .main-banner.smaller-banner {
-    min-height: 700px;
-  }
-  .main-banner > div:not(.banner-content) {
-    margin-top: 5rem;
-  }
 }
 
 .banner-content {
@@ -594,7 +582,7 @@ section {
 .banner-text-large.even {
   padding: 2rem 3rem 2rem 3rem;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
   .banner-content.extend-left {
     box-shadow: -100vw 0 0 100vmax rgba(0, 0, 0, 0.8);;
     clip-path: inset(0 -100vmax); 
@@ -765,7 +753,15 @@ main {
 .max-img {
   width: 100% !important;
   height: auto !important;
-  max-width: unset !important;
+  max-width: 400px !important;
+}
+.img-w-txt #jouleTablet {
+  display: grid;
+  place-items: center;
+  flex: 1;
+}
+#jouleTablet > img {
+  min-width: 300px;
 }
 .rounded-corner {
   border-radius: 20px;
