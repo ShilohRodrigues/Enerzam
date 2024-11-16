@@ -75,12 +75,11 @@ function animate() {
 }
 
 /**
- * Functions for slider 
+ * Functions for slider for our clients sections
  */
 try {
 
   const slider = document.getElementById('slider');
-  const slide = slider.getElementsByTagName('div');
   const prevSlider = document.getElementById('prevSlider');
   const nextSlider = document.getElementById('nextSlider');
 
@@ -122,6 +121,63 @@ try {
       slider.scrollLeft = slider.scrollLeft + (screen.width / 2);
     else
       slider.scrollLeft = slider.scrollLeft + (screen.width / 4);
+
+    if (slider.scrollLeft == (slider.scrollWidth - slider.clientWidth))
+      slider.scrollLeft -= slider.scrollLeft;
+
+    autoScrollInterval = setInterval(autoScroll, 3000); // Restart auto-scroll after interaction
+  });
+}
+catch {
+
+}
+/**
+ * Functions for slider for testimonials
+ */
+try {
+
+  const slider = document.getElementById('slider2');
+  const prevSlider = document.getElementById('prevSlider2');
+  const nextSlider = document.getElementById('nextSlider2');
+
+  let autoScrollInterval;
+
+  // Function to handle the auto-scrolling
+  const autoScroll = () => {
+    if (screen.width < 768)
+      slider.scrollLeft = slider.scrollLeft + (screen.width);
+    else
+      slider.scrollLeft = slider.scrollLeft + (screen.width / 2);
+
+    // Reset to start if at the end
+    if (slider.scrollLeft >= (slider.scrollWidth - slider.clientWidth)) {
+      slider.scrollLeft = 0;
+    }
+  };
+
+  // Start auto-scrolling every 5 seconds
+  autoScrollInterval = setInterval(autoScroll, 5000);
+
+  // Pause auto-scroll when user interacts with the arrows
+  prevSlider.addEventListener('click', () => {
+    clearInterval(autoScrollInterval); // Pause auto-scroll
+    if (screen.width < 768)
+      slider.scrollLeft = slider.scrollLeft - (screen.width);
+    else
+      slider.scrollLeft = slider.scrollLeft - (screen.width / 2);
+
+    if (slider.scrollLeft == 0)
+      slider.scrollLeft += slider.scrollWidth - slider.clientWidth;
+
+    autoScrollInterval = setInterval(autoScroll, 3000); // Restart auto-scroll after interaction
+  });
+
+  nextSlider.addEventListener('click', () => {
+    clearInterval(autoScrollInterval); // Pause auto-scroll
+    if (screen.width < 768)
+      slider.scrollLeft = slider.scrollLeft + (screen.width);
+    else
+      slider.scrollLeft = slider.scrollLeft + (screen.width / 2);
 
     if (slider.scrollLeft == (slider.scrollWidth - slider.clientWidth))
       slider.scrollLeft -= slider.scrollLeft;

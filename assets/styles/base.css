@@ -315,6 +315,9 @@ section {
 .conic-bg {
   background: conic-gradient(from 120deg, #e0e0e0, #ededed);
 }
+.frame {
+  border: solid 2px black;
+}
 .grid {
   display: grid;
 }
@@ -364,7 +367,7 @@ section {
   }
   .reverse-mobile {
     flex-direction: column-reverse;
-    gap: 1rem;
+    gap: 2rem;
   }
   .center-txt.left-mobile {
     text-align: left;
@@ -431,6 +434,9 @@ section {
 }
 .blue-underline {
   border-color: var(--primary-blue);
+}
+.bright-blue-underline {
+  border-color: var(--bg-bright-blue);
 }
 .green-underline {
   border-color: var(--primary-green);
@@ -540,11 +546,6 @@ section {
   background-size: cover;
   color: #fff;
 }
-@media screen and (min-width: 900px) {
-  .img-banner {
-    background-attachment: fixed;
-  }
-}
 .mtl-banner {
   background-image: url(../images/banner-mtl_2_50.webp);
 }
@@ -557,14 +558,23 @@ section {
 .main-banner {
   position: relative;
   min-height: 700px;
-  padding: 250px 0 150px 0;
+  padding: 220px 0 150px 0;
   border-bottom-left-radius: 55px;
   border-bottom-right-radius: 55px;
   box-shadow: 0px 5px 10px 4px rgba(54, 54, 54, 0.5);
   background-color: var(--bg);
   z-index: 2;
 }
-
+@media screen and (min-width: 900px) {
+  .img-banner {
+    background-attachment: fixed;
+  }
+}
+@media screen and (max-width: 900px) {
+  .main-banner {
+    padding: 170px 0 150px 0;;
+  }
+}
 .banner-content {
   height: 100%;
   position: relative;
@@ -661,7 +671,7 @@ section {
   color: #fff;
 }
 .joule-mv-1 {
-  background-image: url(../images/tech_div-joule_mv_section_icons_overlay.jpg);
+  background-image: url(../images/tech_div-joule_mv_section_features_overlay.jpg);
 }
 .joule-mv-2 {
   background-image: url(../images/building-banner.webp);
@@ -868,7 +878,38 @@ main {
   }
 }
 
-/* Slideshow Styles */
+.about-us-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4rem;
+
+}
+.about-us-flex > section {
+  width: 45%;
+}
+@media screen and (max-width: 900px) {
+  .about-us-flex > section {
+    width: 100%;
+  }
+}
+
+.iso {
+  height: 100px !important;
+  width: 100px !important;
+}
+.border {
+  width: 2px;
+  background-color: var(--primary-blue);
+}
+@media screen and (max-width: 900px) {
+  .iso {
+    height: 75px !important;
+    width: 75px !important;
+  }
+}
+
+/* Product Slides Styles */
 .menu-item.active, .menu-item:hover {
   font-weight: 800;
 }
@@ -913,37 +954,6 @@ main {
   max-height: unset;
   visibility: visible;
   position: static;
-}
-
-.about-us-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 4rem;
-
-}
-.about-us-flex > section {
-  width: 45%;
-}
-@media screen and (max-width: 900px) {
-  .about-us-flex > section {
-    width: 100%;
-  }
-}
-
-.iso {
-  height: 100px !important;
-  width: 100px !important;
-}
-.border {
-  width: 2px;
-  background-color: var(--primary-blue);
-}
-@media screen and (max-width: 900px) {
-  .iso {
-    height: 75px !important;
-    width: 75px !important;
-  }
 }
 
 /** Utility Grid **/
