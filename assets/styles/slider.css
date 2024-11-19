@@ -64,8 +64,8 @@
   scroll-snap-align: center;
   flex-shrink: 0;
   height: 400px;
-  width: 50%;
-  max-width: 500px;
+  width: 60%;
+  max-width: 600px;
   position: relative;
   margin: 1rem 2rem;
   padding: 1.5rem 2.5rem;

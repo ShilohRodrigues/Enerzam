@@ -316,7 +316,7 @@ section {
   background: conic-gradient(from 120deg, #e0e0e0, #ededed);
 }
 .frame {
-  border: solid 2px black;
+  border-radius: 1rem;
 }
 .grid {
   display: grid;
@@ -490,7 +490,7 @@ section {
 .fancy-div legend {
   font-size: 1.3rem;
   font-weight: 900;
-  padding: 0 4rem 0.2rem 4rem;
+  padding: 0 4rem 0 4rem;
 }
 @media screen and (max-width: 900px) {
   .fancy-div legend {
@@ -1104,9 +1104,7 @@ main {
   top: 20%;
   font-size: 0.8rem;
   padding: 1rem;
-  -webkit-box-shadow: 4px 4px 8px 3px rgba(14, 139, 181, 0.2);
-  -moz-box-shadow: 4px 4px 8px 3px rgba(14, 139, 181, 0.2);
-  box-shadow: 4px 4px 8px 3px rgba(14, 139, 181, 0.2);
+  box-shadow: 4px 4px 8px 3px RGBA(161, 161, 161, 0.5);
 }
 .building-eng-offers object:not(:first-of-type) {
   margin-top: 3rem;
