@@ -103,9 +103,9 @@
 @media screen and (max-width: 680px) {
   .slider > .card {
     width: 90%;
-    height: 550px;
+    height: 500px;
     margin: 0.5rem 0.5rem;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1.2rem;
   }
   #testimonials .quotes > p {
     padding: 1rem 1.5rem !important;
