@@ -73,18 +73,47 @@
   border-radius: 20px;
   background-color: #fff;
 } 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 880px) {
   .slider > .card {
-    width: 80%;
-    height: 500px;
-    margin: 0.5rem 1rem;
+    width: 70%;
+    height: 450px;
+    margin: 0.5rem 0.5rem;
+    padding: 1.5rem 1.5rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .slider > .card {
+    width: 90%;
+    height: 550px;
+    margin: 0.5rem 0.5rem;
+    padding: 1.5rem 1rem;
+  }
+  #testimonials .quotes > p {
+    padding: 1rem 1.5rem !important;
+  }
+}
+@media screen and (max-width: 380px) {
+  .slider > .card {
+    width: 90%;
+    height: 600px;
+    margin: 0.5rem 0.5rem;
+    padding: 1.5rem 1rem;
+  }
+  #testimonials .card p:not(.title) {
+    font-size: 0.75rem !important;
+  }
+  #testimonials .quotes > p {
+    padding: 0.7rem 0.5rem !important;
+  }
+  #testimonials .quotes:before {
+    top: -10px;
   }
 }
 #testimonials .card .title {
   font-weight: 800;
 }
 #testimonials .card p:not(.title) {
-  font-size: 0.8rem !important;
+  font-size: 0.8rem;
 }
 #testimonials .quotes {
   position: relative;
