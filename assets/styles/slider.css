@@ -4,18 +4,24 @@
   max-width: calc(100vw - var(--left-right-padding));
 }
 .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
 .slider > img {
   scroll-snap-align: center;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   height: 100%;
   width: auto;
   max-width: 33.33%;
@@ -48,28 +54,41 @@
   visibility: visible;
 }
 .slider-prev {
-  transform: translateY(-50%) rotate(90deg);
+  -webkit-transform: translateY(-50%) rotate(90deg);
+      -ms-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
   left: 0;
 }
 .slider-next {
-  transform: translateY(-50%) rotate(-90deg);
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+      -ms-transform: translateY(-50%) rotate(-90deg);
+          transform: translateY(-50%) rotate(-90deg);
   right: 0rem;
 }
 
 /** Testimonial Section */
 .slider > .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   scroll-snap-align: center;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   height: 400px;
   width: 60%;
   max-width: 600px;
   position: relative;
   margin: 1rem 2rem;
   padding: 1.5rem 2.5rem;
-  box-shadow: 1px 2px 3px 2px rgba(20,20,20,0.2);
+  -webkit-box-shadow: 1px 2px 3px 2px rgba(20,20,20,0.2);
+          box-shadow: 1px 2px 3px 2px rgba(20,20,20,0.2);
   border-radius: 20px;
   background-color: #fff;
 } 
