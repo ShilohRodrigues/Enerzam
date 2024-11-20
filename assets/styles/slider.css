@@ -114,7 +114,7 @@
 @media screen and (max-width: 380px) {
   .slider > .card {
     width: 90%;
-    height: 600px;
+    height: 550px;
     margin: 0.5rem 0.5rem;
     padding: 1.5rem 1rem;
   }
