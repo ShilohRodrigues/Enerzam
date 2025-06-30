@@ -349,3 +349,18 @@ for (let i=0; i < accordions.length; i++) {
   })
 
 }
+
+/**
+ * BLOG Settings
+ */
+// window.addEventListener('message', (event) => {
+//   // Optionally filter by origin
+//   // if (event.origin !== 'https://blog.enerzam.com') return;
+
+//   const iframe = document.getElementById('blogIframe');
+//   const newHeight = parseInt(event.data);
+
+//   if (!isNaN(newHeight)) {
+//     iframe.style.height = newHeight + 'px';
+//   }
+// });
