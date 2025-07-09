@@ -139,7 +139,7 @@ header .logo {
   }
   .header-nav .header-item {
       text-align: left;
-      padding: 1.2rem 2rem;
+      padding: 1.2rem 2rem 0.6rem 2rem;
       color: var(--txt-color);
   }
   .header-nav-desktop {

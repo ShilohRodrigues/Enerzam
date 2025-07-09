@@ -52,6 +52,10 @@ else if (headerClasses.contains('eng')) {
   headerItems[2].className += " active-header";
   mobileHeaderItems[2].className += " active-mobile-header";
 } 
+else if (headerClasses.contains('blog')) {
+  headerItems[3].className += " active-header";
+  mobileHeaderItems[3].className += " active-mobile-header";
+} 
 
 // Hiding the header on scroll
 let lastScrollTop = 0;
